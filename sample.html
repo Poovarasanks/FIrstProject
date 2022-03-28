@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Hurricane&display=swap');
+  *{
+    font-family: 'Fruktur', cursive;
+font-family: 'Hurricane', cursive;
+  }
+  body{
+    margin: 5px;
+  }
+  h1{
+    padding: 10px;
+    font-weight: bold;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: relative;
+  background-color: black;
+  color:white;
+  text-align: center;
+  
+  }
+  @keyframes move{
+      from{background-color: black;}
+      to{background-color:darkred;}
+  }
+  nav{
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .dropdown-menu{
+    background-color: bisque;
+    border-radius: 20px;
+    }
+    ul li a{
+      font-weight: bold;
+    }
+.dropdown-menu li a:hover{
+font-weight: bold;
+background-color:cadetblue;
+
+}
+.col-lg-4{
+  opacity: 0.5;
+}
+.col-lg-4:hover{
+  opacity: 1;
+  transition: 2s;
+  transform: scale(1.1,1.1);
+}
+  </style>
+<script>
+ $(document).ready(function(){
+ /*    $("#para").hide();
+  
+    $("#bt").hover(menter,mleave);
+});
+function menter(){
+    $("#para").slideDown();
+  }
+  function mleave(){
+    $("#para").slideUp();
+  }
+*/
+var a=$("#i1");
+var b=$("#i2");
+var c=$("#i3");
+
+a.hover(function(){b.fadeOut(1000);c.fadeOut(1000);},function(){b.fadeIn(1000);c.fadeIn(1000);});
+b.hover(function(){a.fadeOut(1000);c.fadeOut(1000);},function(){a.fadeIn(1000);c.fadeIn(1000);});
+c.hover(function(){a.fadeOut(1000);b.fadeOut(1000);},function(){a.fadeIn(1000);b.fadeIn(1000);});
+
+});
+
+</script>
+  
+</head>
+
+<body>
+<!-- <h1>Hello, world!</h1>
+<div class="container well">
+<div class="rows">
+    <div class="col-md-6">1</div>
+    <div class="col-md-6">2</div>
+</div>
+</div>
+<div class="rows">
+    <div class="col-md-2 col-sd-1">1</div>
+    <div class="col-md-2">2</div>
+    <div class="col-md-2">3</div>
+    <div class="col-md-2">4</div>
+    <div class="col-md-2">5</div>
+    <div class="col-md-2">6</div>
+</div>
+<div>
+<p class="bg-warning text-success">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum quae similique nesciunt. Nihil hic aliquam ab! Nam, corrupti illum ullam quis asperiores doloribus dolor nemo consequatur, incidunt molestias ea! At?</p>
+</div>
+<div class="table-responsive col-md-6">
+    <table class="table table-bordered table-striped">
+    <tr>
+        <td>POO</td>
+        <td>ks</td>
+    </tr>
+    <tr>
+        <td>POO</td>
+        <td>ks</td>
+    </tr>
+</table>
+</div>
+<div class="">
+  <button type="button" class="btn btn-danger">SUBMIT</button>
+  <button type="button" class="btn btn-default">SUBMIT</button>
+</div>
+
+<div class="btn-group btn-group "  style="width:100%;padding: 20px;">
+  <button type="button" class="btn btn-info">SUBMIT</button>
+  <button type="button" class="btn btn-info">SUBMIT</button>
+ <button type="button" class="btn btn-info">SUBMIT</button>
+
+ <div class="btn-group">  
+ 
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Dropdown
+   <span class="caret"></span></button>
+
+   <ul class="dropdown-menu" role="menu">
+  <li><a href="#">css</a></li>
+  <li><a href="#">c++</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+
+<div class="btn-group btn-group-justified" style="width: 80%;">
+  <a href="#" class="btn btn-info"><i class="glyphicon glyphicon-ok"></i> A</a>
+  <a href="#" class="btn btn-info">A</a>
+  <a href="#" class="btn btn-info">A</a>
+ <div class="btn-group">
+<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">DROP <span class="caret"></span></button>
+<ul class="dropdown-menu" role="menu">
+  <li><a href="#">css</a></li>
+  <li><a href="#">c++</a></li>
+</ul>
+</div>
+</div>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-danger active" role="progressbar" style="width:50%;">77</div>
+</div>
+
+<div class="rows">
+  <div class="col-md-4" style="border: 2px solid black;">
+    <ul class="list-group">
+        <li class="list-group-item ">1</li>
+        <li class="list-group-item active">2</li>
+        <li class="list-group-item">3</li>
+    </ul>
+    </div>
+  
+<div class="panel panel-danger col-md-4">
+  <div class="panel-heading">HEADER</div>
+  <div class="panel-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto assumenda nihil magnam eligendi eum ad optio unde! Nisi animi laboriosam ipsam reprehenderit natus iste, dolorum accusantium iusto temporibus tenetur ipsum similique non nam atque vel omnis quidem voluptas dignissimos. A nisi iure placeat? Rerum fuga iure dolores earum repudiandae libero!</div>
+  <div class="panel-footer">FOOTER</div>
+</div>
+
+<div class="dropdown col-md-4">  
+<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+  COURSES <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+<li class="dropdown-header">COURSES</li>  
+<li><a href="">HTML</a></li>
+<li><a href="">CSS</a></li>
+<li><a href="">JS</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="col-md-6">
+  <button type="button" id="bt" data-toggle="collapse" data-target="#para">CLICK</button>
+  <p id="para" class="collapse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores in laudantium ex harum quidem iusto velit error fugit nostrum alias!
+  </p>
+</div>
+<div class="col-sm-6">
+<ul class="nav nav-pills" style="background-color: black;">
+  <li><a href="#">ONE</a></li>
+  <li><a href="#">TWO</a></li>
+
+  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">THREE</a>
+  <ul class="dropdown-menu">
+    <li>hi</li>
+    <li>Bye</li>
+  </ul>
+</li>
+</ul>
+</div>
+<div class="rows col-md-6">
+  <ul class="nav nav-tabs" style="background-color: black;">
+  <li><a href="#p1" data-toggle="tab">ONE</a></li>
+  <li><a href="#p2" data-toggle="tab">TWO</a></li>
+
+  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">THREE</a>
+  <ul class="dropdown-menu">
+    <li>hi</li>
+    <li>Bye</li>
+  </ul>
+</li>
+</ul>
+<div class="tab-content">
+  <div id="p1" class="tab-pane fade">
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div id="p2" class="tab-pane fade">
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+
+</div>
+<h1>SAMPLE</h1>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+<div class="nav navbar-header">
+<a class="navbar-brand" href="#">HEY</a>
+</div>
+
+<ul class="nav navbar-nav">
+  <li><a href="#">HOME</a></li>
+  
+  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About</a>
+  <ul class="dropdown-menu">
+    <li>C</li>
+    <li>JAVA</li>
+  </ul>
+  
+  </li>
+</ul>
+
+
+</div>
+</nav>
+
+-->
+<div class="container-fluid well">
+  <h1>WELCOME</h1>
+</div>
+
+<nav class="navbar  navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#;">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div  id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">COURSES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">JAVA</a></li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="glyphicon glyphicon-user"></i> LOGIN</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">WEB DEVELOPMENT<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li class="seperator"></li>
+            <li><a href="#">JS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid" style="text-align: center;">
+
+<div class="col-lg-4">
+<img src="F:\jquery\pexels-photo-9052927.jpeg" id="i1" width="300px" height="200px">
+</div>
+<div class="col-lg-4">
+  <img src="F:\jquery\pexels-photo-9052927.jpeg" id="i2"width="300px" height="200px">
+</div>
+<div class="col-lg-4">
+  <img src="F:\jquery\pexels-photo-9052927.jpeg" id="i3"width="300px" height="200px">
+</div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+
+</html>
